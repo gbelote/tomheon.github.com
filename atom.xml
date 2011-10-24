@@ -1,0 +1,32 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+  <title>Edmund Jorgensen's Blog</title>
+  <link href="http://www.edmundjorgensen.com/"/>
+  <link type="application/atom+xml" rel="self" href="http://www.edmundjorgensen.com/atom.xml"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://www.edmundjorgensen.com</id>
+  <author>
+    <name>Edmund Jorgensen</name>
+    <email>tomheon@gmail.com</email>
+  </author>
+
+  {% for post in site.posts limit:20%}
+  <entry>
+    <id>http://www.edmundjorgensen.com{{ post.id }}</id>
+    <link type="text/html" rel="alternate" href="http://www.edmundjorgensen.com{{ post.url }}"/>
+    <title>{{ post.title }}</title>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <author>
+      <name>Edmund Jorgensen</name>
+      <uri>http://www.edmundjorgensen.com</uri>
+    </author>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+  {% endfor %}
+ 
+</feed>
+

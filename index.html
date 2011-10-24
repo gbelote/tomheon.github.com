@@ -1,0 +1,32 @@
+---
+layout: default
+title: Edmund's Blog
+subtitle: Writing, coding--that kind of thing.
+nohome: true
+---
+
+<h2>Thanks for stopping by.</h2>
+<br />
+<br />
+{% for post in site.posts limit:5 %}
+<div class="post-head-material alert-message block-message info">
+<h3>{{ post.title }} <small>{{ post.subtitle }}</small></h3>
+</div>
+<div id="post">
+{{ post.content }}
+</div>
+<a href="{{ post.url }}#comments">Comments</a>
+<hr />
+<div class="post-footer-material">
+Posted <abbr> {{ post.date | date_to_string }}</abbr> to categories
+{% for category in post.categories %}
+<span class="label">{{ category }}</span>&nbsp;
+<span class="permalink">(<a href="{{ site.url }}{{ post.url }}" class="permalink">permalink</a>)</span>
+{% endfor %}
+</div>
+<hr />
+<br />
+<br />
+<br />
+{% endfor %}
+

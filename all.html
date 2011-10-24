@@ -1,0 +1,16 @@
+---
+layout: default
+title: Everything there is to see
+subtitle: in case you missed it the first time around.
+---
+
+<ul>
+{% for post in site.posts %}
+<li><a href="{{ post.url }}">{{ post.title }}</a> 
+{% for category in post.categories %}
+<span class="label">{{ category }}</span> 
+{% endfor %}
+</li>
+{% endfor %}
+</ul>
+

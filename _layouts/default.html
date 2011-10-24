@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Writing, coding--that sort of thing.</title>
+    <meta name="description" content="">
+    <meta name="author" content="Edmund Jorgensen">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/css/bootstrap.css" rel="stylesheet" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+    <style type="text/css">
+      /* Override some defaults */
+      html, body {
+        background-color: #eee;
+      }
+      body {
+        padding-top: 40px;
+      }
+      .container > footer p {
+        text-align: center;
+      }
+
+      /* The white background content wrapper */
+      .content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+        -webkit-border-radius: 0 0 6px 6px;
+           -moz-border-radius: 0 0 6px 6px;
+                border-radius: 0 0 6px 6px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+                box-shadow: 0 1px 2px rgba(0,0,0,.15);
+      }
+
+      #post p {
+        margin-top: 20px;
+      }
+
+      span.permalink  {
+        font-size: 75%;
+      }
+
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+
+    <!-- Google analytics. -->
+    <script type="text/javascript">
+  
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26248927-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="content">
+        <div class="page-header">
+          <h1>{{ page.title }} <small>{{ page.subtitle }}</small></h1>
+        </div>
+        <div class="row">
+          <div class="span12">
+	    {{ content }}
+          </div>
+          <div class="span4">
+	    <h3>Some useful links</h3>
+	    <ul>
+	    <li><a href="/">Home</a></li>
+	    <li>Read my novel, <a href="http://www.amazon.com/Speculation-ebook/dp/B005W7BNL6/ref=sr_1_1?ie=UTF8&qid=1318942061&sr=8-1">Speculation</a></li>
+	    <li><a href="/poems.html">Poems</a></li>
+	    <li><a href="/all.html">All Posts</a></li>
+	    </ul>
+	    <h3>About me</h3>
+	    <p>By day a coder at <a href="http://www.wingu.com">Wingu</a>, by night a writer of clandestine verse and prose. Active on <a href="http://twitter.com/tomheon">Twitter</a> and <a href="https://github.com/tomheon">GitHub.</a></p>
+	    <p>Author of <a href="http://www.amazon.com/Speculation-ebook/dp/B005W7BNL6/ref=sr_1_1?ie=UTF8&qid=1318942061&sr=8-1">Speculation</a>, available from Amazon.</p>	    
+            <h3>Recent happenings</h3>
+	    <ul>
+	    {% for post in site.posts limit:4 %}
+	    <li><a href="{{ post.url }}">{{ post.title }}</a><abbr> ({{ post.date | date_to_string }}</abbr>)</li>
+	    {% endfor %}
+	    </ul>
+	    <iframe src="http://hype.la/ads/ecaa9234-0cb8-4534-bf17-ce43356f8b08.html" 
+		    width="155px" 
+		    height="300px" 
+		    style="border: 0px; overflow: hidden"><p>Ads provided by <a href="http://hype.la">hype.la</a></iframe>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; Edmund Jorgensen 2011&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/sitemap.xml">sitemap</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/rss.xml">rss</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/atom.xml">atom</a></p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
