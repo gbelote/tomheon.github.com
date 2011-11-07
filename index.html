@@ -21,8 +21,8 @@ nohome: true
 Posted <abbr> {{ post.date | date_to_string }}</abbr> to categories
 {% for category in post.categories %}
 <span class="label">{{ category }}</span>&nbsp;
-<span class="permalink">(<a href="{{ site.url }}{{ post.url }}" class="permalink">permalink</a>)</span>
 {% endfor %}
+<span class="permalink">(<a href="{{ site.url }}{{ post.url }}" class="permalink">permalink</a>)</span>
 </div>
 <hr />
 <br />
