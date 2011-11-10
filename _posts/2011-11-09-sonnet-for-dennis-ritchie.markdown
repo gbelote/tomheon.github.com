@@ -21,5 +21,5 @@ Laptops they peck, the phones on which they yammer,
 The external nerves through which they know--these all  
 Twiddle their bits to meaning through your grammar,  
 Growing warm with your instructions.  If the soul  
-Exists, what can it be but information?  
-Your ghost performs the world's computation.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exists, what can it be but information?  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Your ghost performs the world's computation.
