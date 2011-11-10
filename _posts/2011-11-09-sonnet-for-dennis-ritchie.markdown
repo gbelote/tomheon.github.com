@@ -6,7 +6,8 @@ categories:
 - poem
 ---
 
-_"Dennis developed the Unix operating system and the C programming language. So why should you care?" -- Steve Jacks to the Chicago Tribune_
+_"Dennis developed the Unix operating system and the C programming language. So why should you care?"_  
+_--Steve Jacks to the Chicago Tribune_
 
 Walkers don't care too much who made their shoes  
 If they're good shoes.  Dependence without thought  
