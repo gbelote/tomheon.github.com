@@ -7,7 +7,7 @@ categories:
 ---
 
 _"Dennis developed the Unix operating system and the C programming language. So why should you care?"_  
-_--Steve Jacks to the Chicago Tribune_
+_--Steve Jacks to the [Chicago Tribune](http://articles.chicagotribune.com/2011-10-18/news/chi-111018jacks_briefs_1_vending-machine-unix-traffic-light)_
 
 Walkers don't care too much who made their shoes  
 If they're good shoes.  Dependence without thought  
