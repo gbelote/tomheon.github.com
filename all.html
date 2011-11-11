@@ -6,7 +6,7 @@ subtitle: in case you missed it the first time around.
 
 <ul>
 {% for post in site.posts %}
-<li><a href="{{ post.url }}">{{ post.title }}</a> 
+<li><a href="{{ post.url }}">{{ post.title }}</a> <abbr> ({{ post.date | date_to_string }}</abbr>)
 {% for category in post.categories %}
 <span class="label">{{ category }}</span> 
 {% endfor %}
