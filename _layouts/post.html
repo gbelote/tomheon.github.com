@@ -9,6 +9,20 @@ layout: default
 <hr />
 Posted <abbr>{{ page.date | date_to_string }}</abbr>
 <hr />
+<table>
+<tr>
+<td>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="tomheon" data-lang="en">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></td>
+<td>
+<!-- Place this tag where you want the +1 button to render -->
+<g:plusone annotation="inline" size="small" width="200"></g:plusone>
+
+</td>
+<td>
+<div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
+</td></tr></table>
+
 <a name="comments"></a>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -23,4 +37,3 @@ Posted <abbr>{{ page.date | date_to_string }}</abbr>
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-
