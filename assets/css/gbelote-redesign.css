@@ -1,11 +1,7 @@
 
 html, body {
-    background: url(/assets/images/silver-blue-squares.png);
+    background: url(/assets/img/silver-blue-squares.png);
     /* background-color: #eee; */
-}
-
-body {
-    padding-top: 10px;
 }
 
 .container > footer p {
@@ -28,38 +24,9 @@ body {
 
 }
 
-.main-container .content {
-    margin: 20px;
-}
-
-header {
-    position: relative;
-    padding: 20px 0;
-}
-
-header a.logo {
-    font-size: 30px;
-    font-weight: bold;
-    text-shadow: 0px 2px 4px #888;
-    color: black;
-
-    text-decoration: none;
-}
-
-header a.logo:hover {
-    text-shadow: 0px 2px 4px #aaa;
-    color: #222;
-}
-
-header .book-link {
-    position: absolute;
-    top: 5px;
-    right: 0;
-}
-
 a.red-button {
     border: 14px;
-    -webkit-border-image: url(/assets/images/red-button-border.png) 14 14 14 14 repeat stretch;
+    -webkit-border-image: url(/assets/img/red-button-border.png) 14 14 14 14 repeat stretch;
     color: white;
     text-decoration: none;
     margin: -5px;
@@ -72,7 +39,7 @@ a.red-button {
 
 a.red-button:hover {
     /* TODO: preload */
-    -webkit-border-image: url(/assets/images/red-button-border-hover.png) 14 14 14 14 repeat stretch;
+    -webkit-border-image: url(/assets/img/red-button-border-hover.png) 14 14 14 14 repeat stretch;
 }
 
 #post p {
