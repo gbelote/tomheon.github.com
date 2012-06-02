@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="page-{{ page.name }}">
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
@@ -47,71 +47,25 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="brand" href="/">Edmund's Blog</a>
+    <div class="sidebar-wrap">
+        <div class="sidebar-nav">
+            <div class="title-wrap">
+                <header>
+                <a class="brand" href="/">Edmund Jorgensen</a>
+                </header>
             </div>
+            {% include recent_articles.ext %}
+            <div class="about-me">{% include about.ext %}</div>
+            <div class="promo">{% include promo.ext %}</div>
+            <div class="ads">{% include ads.ext %}</div>
+            <div class="subscribe">{% include subscribe.ext %}</div>
+            {% include useful_links.ext %}
+        </div>
+
+        <div class="sidebar-body">
+            {{ content }}
         </div>
     </div>
-
-    <div class="main-container container">
-
-      <div class="content">
-        <div class="page-header">
-          <h1>{{ page.title }} <small>{{ page.subtitle }}</small></h1>
-        </div>
-        <div class="row">
-          <div class="span8">
-	    {{ content }}
-          </div>
-          <div class="span4">
-	    <a class="btn large primary" href="http://amzn.to/o9Ixvk">Read my novel, Speculation</a>
-	    <br />
-	    <br />
-	    <br />
-	    <h3>Subscribe!</h3>
-	    <ul>
-	      <li><a href="http://feedburner.google.com/fb/a/mailverify?uri=EdmundJorgensensBlog&amp;loc=en_US">Subscribe by Email</a></li>
-	      <li><a href="http://feeds.feedburner.com/EdmundJorgensensBlog">Subscribe by RSS etc.</a></li>
-	    </ul>
-	    <h3>Some useful links</h3>
-	    <ul>
-	    <li><a href="/">Home</a></li>
-	    <li><a href="/poems.html">Poems</a></li>
-	    <li><a href="/all.html">All Posts</a></li>
-	    </ul>
-	    <h3>About me</h3>
-	    <p>By day I code at <a href="http://www.wingu.com">Wingu</a>, by night I write at...well, my desk. Active on <a href="http://twitter.com/tomheon">Twitter</a> and <a href="https://github.com/tomheon">GitHub.</a>  I am ewj (at) inkwellandoften (dot) com if you want
-to get in touch.</p>
-	    <p>Author of the novel <a href="http://amzn.to/o9Ixvk">Speculation</a></p>
-            <h3>Recent happenings</h3>
-	    <ul>
-	    {% for post in site.posts limit:4 %}
-	    <li><a href="{{ post.url }}">{{ post.title }}</a><abbr> ({{ post.date | date_to_string }}</abbr>)</li>
-	    {% endfor %}
-	    </ul>
-	    <iframe src="http://hype.la/ads/ecaa9234-0cb8-4534-bf17-ce43356f8b08.html"
-		    width="200px"
-		    height="300px"
-		    style="border: 0px; overflow: hidden"><p>Ads provided by <a href="http://hype.la">hype.la</a></iframe>
-          </div>
-        </div>
-      </div>
-
-      <footer>
-        <p>&copy; Edmund Jorgensen 2011&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/sitemap.xml">sitemap</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/rss.xml">rss</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/atom.xml">atom</a></p>
-      </footer>
-
-    </div> <!-- /container -->
-<!-- Place this render call where appropriate -->
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
 
   </body>
 </html>
