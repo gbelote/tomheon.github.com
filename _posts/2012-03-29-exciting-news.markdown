@@ -1,5 +1,6 @@
 ---
 title: Exciting News--Speculation is 117 in the Amazon Kindle Store!
+publish_date: March 29, 2012
 layout: post
 categories:
 - speculation

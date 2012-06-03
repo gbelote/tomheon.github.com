@@ -36,6 +36,7 @@
 
 html, body {
     background-color: @base02;
+    padding-bottom: 50px;
 }
 
 body, p {
@@ -122,6 +123,7 @@ h1.brand {
 
                     background-color: @blue;
                     text-shadow: 0px 1px 1px @base00;
+                    .text-overflow;
 
                     color: @base2;
                     font-size: 22px;
@@ -192,8 +194,8 @@ h1.brand {
         position: relative;
         z-index: 2;
         margin: 0 200px;
-        padding: 30px 50px;
-        min-height: 600px;
+        padding: 40px 50px;
+        min-height: 550px;
 
         .date {
             position: absolute;
@@ -204,22 +206,63 @@ h1.brand {
             line-height: 18px;
         }
 
-        article {
+        font-size: 24px;
+        line-height: 28px;
+
+        p {
             font-size: 24px;
             line-height: 28px;
+            margin: 10px 0;
+        }
 
-            p {
-                font-size: 24px;
-                line-height: 28px;
-                margin: 10px 0;
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: @base03;
+            text-shadow: 0px -1px 1px @base3;
+        }
+
+        #binder-comments {
+            position: absolute;
+
+            top: 100%;
+            margin-top: 60px;
+
+            left: 0;
+            right: 0;
+            height: auto;
+
+            padding: 0 10px;
+
+            #binder-comments-content {
+                padding: 30px 40px;
             }
 
-            h1 {
-                text-align: center;
-                margin-bottom: 30px;
-                color: @base03;
-                text-shadow: 0px -1px 1px @base3;
+            #binder-comments-binding {
+                position: absolute;
+
+                top: -14px;
+                height: 30px;
+                left: 50%;
+                width: 100%;
+                margin-left: -50%;
+
+                background-image: url(/assets/img/vertical-binding.png);
+                background-repeat: repeat-x;
             }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -40px;
+                height: 40px;
+                left: 0;
+                right: 0;
+            }
+
+            background: @base3 url(/assets/img/exclusive_paper-base3.png);
+            .border-radius( 0 0 10px 10px );
+            .box-shadow( -1px 2px 3px @base02 );
         }
     }
 }

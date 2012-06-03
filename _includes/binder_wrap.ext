@@ -1,10 +1,7 @@
 <div id="binder">
   <div id="binder-content-bg"><!-- --></div>
   <div id="binder-content">
-    <article>
-      {% if page.publish_date %}<div class="date">{{ page.publish_date }}</div>{% endif %}
-      {{ content }}
-    </article>
+    {{ content }}
   </div>
   <div id="binding"><!-- --></div>
   <div id="binder-other-page"><!-- --></div>
@@ -12,8 +9,14 @@
   <div id="bookmarks">
     <nav>
       <div id="recent">
-        <li class="current"><a href="javascript:">One article</a></li>
-        <li><a href="javascript:">Another Article</a></li>
+        {% for post in site.posts limit: 4 %}
+          {% assign current = nil %}
+          {% if page.url == post.url %}
+            {% assign current = "current" %}
+          {% endif %}
+
+          <li class="{{ current }}"><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
       </div>
 
       <div id="indexes">

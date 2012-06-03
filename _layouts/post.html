@@ -1,18 +1,17 @@
 ---
-layout: default
+layout: binder
 name:   post
 ---
 
-<article id="post">
-    <h1><a href="{{ post.url }}">{{ page.title }}<small>{{ post.subtitle }}</small></a></h1>
-
-    <div class="content">
-        {{ content }}
-    </div>
+<article>
+    {% if page.publish_date %}<div class="date">{{ page.publish_date }}</div>{% endif %}
+    {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+    {{ content }}
 </article>
 
-<hr />
-Posted <abbr>{{ page.date | date_to_string }}</abbr>
+{% include comments.ext %}
+
+<!--
 <hr />
 <table>
 <tr>
@@ -20,25 +19,12 @@ Posted <abbr>{{ page.date | date_to_string }}</abbr>
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="tomheon" data-lang="en">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></td>
 <td>
-<!-- Place this tag where you want the +1 button to render -->
+<! -- Place this tag where you want the +1 button to render -- >
 <g:plusone annotation="inline" size="small" width="200"></g:plusone>
 
 </td>
 <td>
 <div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
 </td></tr></table>
+-->
 
-<a name="comments"></a>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_identifier = '{{ page.url }}';
-    var disqus_url = '{{site.url }}{{ page.url }}';
-    var disqus_shortname = 'edmundjorgensen'; // required: replace example with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
