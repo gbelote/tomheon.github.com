@@ -47,18 +47,21 @@ body, p {
 h1.brand {
     margin: 20px 0;
 
-    color: white;
+    color: @base3;
     text-align: center;
 
     font-size: 36px;
     line-height: 36px;
 
     text-shadow: 0 2px 1px @base03;
+
+    a { color: @base3 }
 }
 
 #binder {
     position: relative;
     margin-top: 10px;
+    padding-top: 20px;
 
     min-width: 400px;
 
@@ -78,8 +81,10 @@ h1.brand {
 
     #binding {
         position: absolute;
-        top: 10px;
-        bottom: 10px;
+        top: 50%;
+        height: 100%;
+        margin-top: -50%;
+
         width: 20px;
         right: 187px;
         z-index: 1;
@@ -169,7 +174,7 @@ h1.brand {
             }
 
             #social {
-                margin-top: 60px;
+                margin-top: 30px;
 
                 li {
                     a {
@@ -194,12 +199,12 @@ h1.brand {
         position: relative;
         z-index: 2;
         margin: 0 200px;
-        padding: 40px 50px;
+        padding: 20px 50px;
         min-height: 550px;
 
         .date {
             position: absolute;
-            top: 15px;
+            top: 0px;
             right: 20px;
 
             font-size: 18px;
@@ -220,6 +225,18 @@ h1.brand {
             margin-bottom: 30px;
             color: @base03;
             text-shadow: 0px -1px 1px @base3;
+        }
+
+        ul {
+            li {
+                line-height: 28px;
+                margin: 8px 0;
+            }
+        }
+
+        .label {
+            position: relative;
+            top: -4px;
         }
 
         #binder-comments {

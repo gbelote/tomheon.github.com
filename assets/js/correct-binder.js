@@ -11,21 +11,15 @@ $(function() {
     window.update_binder_height = function() {
         // what is the current height?
         var current = $("#binder").height();
-        console.log('current height', current);
 
         // does it evenly divide by the clip height?
         var diff = current % clip_height;
-        console.log('diff is', diff);
-        if( diff > 0 ) {
-            // no -> force the height to change via min-height
-            // NOTE: I use min-height rather than height here in case something
-            //       later causes the height to change. In this case, we may get
-            //       a weird looking binding, but at least the #binder expands
-            //       to fit the new content (rather than it overflowing). If
-            //       this does happen maybe you can add a polling check.
-            var new_height = current + Math.max( diff, clip_height - diff );
-            console.log('adjusting min-height to', new_height);
-            $("#binder-content").css('min-height', new_height);
+        if( diff ) {
+            var height = current - diff;
+            $('#binding').css({
+                'height': height,
+                'margin-top': '-'+ (current/2) +'px'
+            });
         }
     };
 
@@ -35,15 +29,6 @@ $(function() {
 
         // if we have binder comments and there's a diff
         if( diff ) {
-            console.log('binder clip width off by', diff);
-            // do we add diff or width-diff ?
-
-            // adjust the left/right padding so our width becomes a multiple of
-            // the clip width.
-//          $("#binder-comments-binding").css({
-//              left: comment_clip_padding + Math.floor(change/2),
-//              right: comment_clip_padding + Math.ceil(change/2)
-//          });
             var width = current - diff;
             $("#binder-comments-binding").css({
                 'width': width,
@@ -53,7 +38,8 @@ $(function() {
     };
 
     // update binding!
-    update_binder_height();
+    //update_binder_height();
+    setTimeout(function() { update_binder_height() }, 1);
 
     update_comment_binder_width();
     // after any resize of the window, adjust the comment binding

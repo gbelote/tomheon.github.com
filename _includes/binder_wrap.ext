@@ -20,21 +20,22 @@
       </div>
 
       <div id="indexes">
-        <li><a href="javascript:">All Posts</a></li>
-        <li><a href="javascript:">Just Poems</a></li>
+        <li><a href="/all.html">All Posts</a></li>
+        <li><a href="/poems.html">Just Poems</a></li>
       </div>
 
       <div id="about">
-        <li><a href="javascript:">About Me</a></li>
+        <li><a href="/about.html">About Me</a></li>
       </div>
 
       <div id="social">
-        <li><a href="javascript:">Subscribe via RSS</a></li>
-        <li><a href="javascript:">Follow me on Twitter</a></li>
+        <li><a href="http://feedburner.google.com/fb/a/mailverify?uri=EdmundJorgensensBlog&loc=en_US">Subscribe via email</a></li>
+        <li><a href="http://feeds.feedburner.com/EdmundJorgensensBlog">Subscribe via RSS</a></li>
+        <li><a href="http://twitter.com/tomheon">Follow me on Twitter</a></li>
       </div>
 
       <div id="books">
-        <li><a href="javascript:">Read my book!</a></li>
+        <li><a href="http://amzn.to/o9Ixvk">Read my book!</a></li>
       </div>
     </nav>
   </div>

@@ -1,52 +1,15 @@
 ---
-layout: default
-#title: Edmund's Blog
-nohome: true
-
-# This is used for styling purposes. We give <html> a unique ID (based on this)
-# so we can add page-specific stylings to the page.
-name:   home
+layout: binder
+title: Edmund Jorgensen's Blog
 ---
 
-{% for post in site.posts limit:5 %}
-<article class="post">
-    <h3>{{ post.title }} <small>{{ post.subtitle }}</small></h3>
-    <div class="content">
-        {{ post.content }}
-    </div>
-    <a href="{{ post.url }}#comments">Comments</a>
-    <hr />
-    <div class="post-footer-material">
-        Posted <abbr> {{ post.date | date_to_string }}</abbr> to categories
-        {% for category in post.categories %}
-            <span class="label">{{ category }}</span>&nbsp;
-        {% endfor %}
-
-        <span class="permalink">(<a href="{{ site.url }}{{ post.url }}" class="permalink">permalink</a>)</span>
-    </div>
-
-    <hr />
-
-    <table>
-        <tr>
-            <td>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.url}}{{ post.url }}" data-text="{{ post.title }}" data-via="tomheon" data-lang="en">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-            </td>
-            <td>
-                <!-- Place this tag where you want the +1 button to render -->
-                <g:plusone annotation="inline" size="small" width="200" href="{{ site.url}}{{ post.url }}"></g:plusone>
-            </td>
-            <td>
-                <div class="fb-like" data-href="{{ site.url }}{{ post.url }}" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
-            </td>
-        </tr>
-    </table>
-
-    <br />
-    <br />
-    <br />
-</article>
+<ul>
+{% for post in site.posts %}
+<li><a href="{{ post.url }}">{{ post.title }}</a><br/> <abbr>{{ post.date | date_to_string }}</abbr>
+{% for category in post.categories %}
+<span class="label">{{ category }}</span> 
 {% endfor %}
+</li>
+{% endfor %}
+</ul>
 
