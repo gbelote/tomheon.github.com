@@ -1,62 +1,288 @@
-// Core variables and mixins
-@import "bootstrap/variables.less"; // Modify this for custom colors, font-sizes, etc
-@import "bootstrap/mixins.less";
+// Solarized Colors
 
-// CSS Reset
-@import "bootstrap/reset.less";
+@base03:    #002b36;
+@base02:    #073642;
+@base01:    #586e75;
+@base00:    #657b83;
+@base0:     #839496;
+@base1:     #93a1a1;
+@base2:     #eee8d5;
+@base3:     #fdf6e3;
+@yellow:    #b58900;
+@orange:    #cb4b16;
+@red:       #dc322f;
+@magenta:   #d33682;
+@violet:    #6c71c4;
+@blue:      #268bd2;
+@cyan:      #2aa198;
+@green:     #859900;
 
-// Grid system and page structure
-@import "bootstrap/scaffolding.less";
-@import "bootstrap/grid.less";
-@import "bootstrap/layouts.less";
+//@ brblack:   #1c1c1c;
+//@ black:     #262626;
+//@ brgreen:   #585858;
+//@ bryellow:  #626262;
+//@ brblue:    #808080;
+//@ brcyan:    #8a8a8a;
+//@ white:     #e4e4e4;
+//@ brwhite:   #ffffd7;
+//@ yellow:    #af8700;
+//@ brred:     #d75f00;
+//@ red:       #d70000;
+//@ magenta:   #af005f;
+//@ brmagenta: #5f5faf;
+//@ blue:      #0087ff;
+//@ cyan:      #00afaf;
+//@ green:     #5f8700;
 
-// Base CSS
-@import "bootstrap/type.less";
-@import "bootstrap/code.less";
-@import "bootstrap/forms.less";
-@import "bootstrap/tables.less";
+html, body {
+    background-color: @base02;
+    padding-bottom: 50px;
+}
 
-// Components: common
-@import "bootstrap/sprites.less";
-@import "bootstrap/dropdowns.less";
-@import "bootstrap/wells.less";
-@import "bootstrap/component-animations.less";
-@import "bootstrap/close.less";
+body, p {
+    font-family: 'Rancho', cursive;
+    color: @base03;
+}
 
-// Components: Buttons & Alerts
-@import "bootstrap/buttons.less";
-@import "bootstrap/button-groups.less";
-@import "bootstrap/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+h1.brand {
+    margin: 20px 0;
 
-// Components: Nav
-@import "bootstrap/navs.less";
-@import "bootstrap/navbar.less";
-@import "bootstrap/breadcrumbs.less";
-@import "bootstrap/pagination.less";
-@import "bootstrap/pager.less";
+    color: @base3;
+    text-align: center;
 
-// Components: Popovers
-@import "bootstrap/modals.less";
-@import "bootstrap/tooltip.less";
-@import "bootstrap/popovers.less";
+    font-size: 36px;
+    line-height: 36px;
 
-// Components: Misc
-@import "bootstrap/thumbnails.less";
-@import "bootstrap/labels.less";
-@import "bootstrap/progress-bars.less";
-@import "bootstrap/accordion.less";
-@import "bootstrap/carousel.less";
-@import "bootstrap/hero-unit.less";
+    text-shadow: 0 2px 1px @base03;
 
-// Utility classes
-@import "bootstrap/utilities.less"; // Has to be last to override when necessary
+    a { color: @base3 }
+}
 
+#binder {
+    position: relative;
+    margin-top: 10px;
+    padding-top: 20px;
 
-// overrides and 3rd party fun
+    min-width: 400px;
 
-@import "binder/index.less";
+    #binder-content-bg {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 200px;
+        right: 200px;
+        z-index: 0;
 
-// Edmund: Drop custom overrides here!
-@import "overrides.less";
+        //background: white url(/assets/img/exclusive_paper.png);
+        background: @base3 url(/assets/img/exclusive_paper-base3.png);
+        .border-radius( 10px 0 0 10px );
+        .box-shadow( -1px 2px 3px @base02 );
+    }
 
+    #binding {
+        position: absolute;
+        top: 50%;
+        height: 100%;
+        margin-top: -50%;
+
+        width: 20px;
+        right: 187px;
+        z-index: 1;
+
+        background-image: url(/assets/img/sketch-binder-clip.png);
+        background-repeat: repeat-y;
+    }
+
+    #binder-other-page {
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+        width: 193px;
+        right: 0;
+
+        z-index: 0;
+
+        background-color: @base2;
+    }
+
+    #bookmarks {
+        position: absolute;
+        top: 10px;
+        left: 19px;
+        width: 185px;
+        height: auto;
+
+        nav {
+            list-style: none;
+
+            li {
+                margin: 10px 0;
+                padding-right: 4px;
+
+                a {
+                    display: block;
+                    .box-sizing(border-box);
+
+                    padding: 5px 15px;
+
+                    background-color: @blue;
+                    text-shadow: 0px 1px 1px @base00;
+                    .text-overflow;
+
+                    color: @base2;
+                    font-size: 22px;
+                    line-height: 22px;
+                }
+
+                &.current {
+                    position: relative;
+                    padding-right: 0px;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+
+                        top: 0;
+                        bottom: 0;
+                        right: -20px;
+                        width: 20px;
+
+                        background-color: rgba(0,0,0,0.3);
+                    }
+                }
+            }
+
+            #about {
+                margin-top: 30px;
+
+                li {
+                    a {
+                        background-color: @green;
+                    }
+                }
+            }
+
+            #indexes {
+                margin-top: 30px;
+
+                li {
+                    a {
+                        background-color: @cyan;
+                    }
+                }
+            }
+
+            #social {
+                margin-top: 30px;
+
+                li {
+                    a {
+                        background-color: @yellow;
+                    }
+                }
+            }
+
+            #books {
+                margin-top: 30px;
+
+                li {
+                    a {
+                        background-color: @red;
+                    }
+                }
+            }
+        }
+    }
+
+    #binder-content {
+        position: relative;
+        z-index: 2;
+        margin: 0 200px;
+        padding: 20px 50px;
+        min-height: 550px;
+
+        .date {
+            position: absolute;
+            top: 0px;
+            right: 20px;
+
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        font-size: 24px;
+        line-height: 28px;
+
+        p {
+            font-size: 24px;
+            line-height: 28px;
+            margin: 10px 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: @base03;
+            text-shadow: 0px -1px 1px @base3;
+
+            a { color: @base03 }
+        }
+
+        ul {
+            li {
+                line-height: 28px;
+                margin: 8px 0;
+            }
+        }
+
+        .label {
+            position: relative;
+            top: -4px;
+        }
+
+        #binder-comments {
+            position: absolute;
+
+            top: 100%;
+            margin-top: 60px;
+
+            left: 0;
+            right: 0;
+            height: auto;
+
+            padding: 0 10px;
+
+            #binder-comments-content {
+                padding: 30px 40px;
+            }
+
+            #binder-comments-binding {
+                position: absolute;
+
+                top: -14px;
+                height: 30px;
+                left: 50%;
+                width: 100%;
+                margin-left: -50%;
+
+                background-image: url(/assets/img/vertical-binding.png);
+                background-repeat: repeat-x;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -40px;
+                height: 40px;
+                left: 0;
+                right: 0;
+            }
+
+            background: @base3 url(/assets/img/exclusive_paper-base3.png);
+            .border-radius( 0 0 10px 10px );
+            .box-shadow( -1px 2px 3px @base02 );
+        }
+    }
+}
 

@@ -39,7 +39,7 @@ $(function() {
 
     // update binding!
     //update_binder_height();
-    setTimeout(function() { update_binder_height() }, 1);
+    setTimeout(function() { update_binder_height() }, 100); // yuck!
 
     update_comment_binder_width();
     // after any resize of the window, adjust the comment binding
