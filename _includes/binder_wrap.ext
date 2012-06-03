@@ -20,12 +20,12 @@
       </div>
 
       <div id="indexes">
-        <li><a href="/all.html">All Posts</a></li>
-        <li><a href="/poems.html">Just Poems</a></li>
+        <li {% if page.url == "/all.html" %} class="current" {% endif %}><a href="/all.html">All Posts</a></li>
+        <li {% if page.url == "/poems.html" %} class="current" {% endif %}><a href="/poems.html">Just Poems</a></li>
       </div>
 
       <div id="about">
-        <li><a href="/about.html">About Me</a></li>
+        <li {% if page.url == "/about.html" %} class="current" {% endif %}><a href="/about.html">About Me</a></li>
       </div>
 
       <div id="social">
