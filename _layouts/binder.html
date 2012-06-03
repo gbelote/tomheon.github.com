@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" id="page-{{ page.name }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="author" content="Edmund Jorgensen">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/css/binder.css" rel="stylesheet" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+    <link href='http://fonts.googleapis.com/css?family=Yellowtail|La+Belle+Aurore|Marck+Script|Calligraffitti|Dancing+Script|Pacifico|Rochester|Rancho|Kaushan+Script' rel='stylesheet' type='text/css'>
+
+
+    <!-- Google analytics. -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26248927-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery-1.7.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap-all.min.js"></script>
+    <script type="text/javascript" src="/assets/js/correct-binder.js"></script>
+  </head>
+
+  <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <h1 class="brand">Edmund Jorgensen</h1>
+    {% include binder_wrap.ext %}
+
+  </body>
+</html>
+

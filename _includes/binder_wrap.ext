@@ -1,0 +1,38 @@
+<div id="binder">
+  <div id="binder-content-bg"><!-- --></div>
+  <div id="binder-content">
+    <article>
+      {% if page.publish_date %}<div class="date">{{ page.publish_date }}</div>{% endif %}
+      {{ content }}
+    </article>
+  </div>
+  <div id="binding"><!-- --></div>
+  <div id="binder-other-page"><!-- --></div>
+
+  <div id="bookmarks">
+    <nav>
+      <div id="recent">
+        <li class="current"><a href="javascript:">One article</a></li>
+        <li><a href="javascript:">Another Article</a></li>
+      </div>
+
+      <div id="indexes">
+        <li><a href="javascript:">All Posts</a></li>
+        <li><a href="javascript:">Just Poems</a></li>
+      </div>
+
+      <div id="about">
+        <li><a href="javascript:">About Me</a></li>
+      </div>
+
+      <div id="social">
+        <li><a href="javascript:">Subscribe via RSS</a></li>
+        <li><a href="javascript:">Follow me on Twitter</a></li>
+      </div>
+
+      <div id="books">
+        <li><a href="javascript:">Read my book!</a></li>
+      </div>
+    </nav>
+  </div>
+</div>
