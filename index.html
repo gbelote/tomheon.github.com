@@ -3,13 +3,12 @@ layout: binder
 title: Edmund Jorgensen's Blog
 ---
 
-<ul>
-{% for post in site.posts %}
-<li><a href="{{ post.url }}">{{ post.title }}</a><br/> <abbr>{{ post.date | date_to_string }}</abbr>
-{% for category in post.categories %}
-<span class="label">{{ category }}</span> 
+{% for post in site.posts limit: 1 %}
+    <article>
+        <div class="date">{{ post.date | date_to_string }}</div>
+        {% if post.title %}<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>{% endif %}
+        {{ post.content }}
+    </article>
+    <a href="{{ post.url }}#comments">View Comments</a>
 {% endfor %}
-</li>
-{% endfor %}
-</ul>
 
